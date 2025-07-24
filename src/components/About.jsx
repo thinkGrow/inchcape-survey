@@ -8,8 +8,8 @@ const About = () => {
       <section id="about" className="bg-[#f4f6fb] py-16 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-blue-900 text-3xl font-extrabold mb-2">
-              CAPT. MD FAZLAY UDDIN CHOWDHURY
+            <h2 className="text-blue-900 text-3xl font-extrabold mb-2 text-balance">
+              Captain Md Fazlay Uddin Chowdhury
             </h2>
             <p className="italic mb-6">
               Managing Director of the Inchcape Survey & Inspection Company
