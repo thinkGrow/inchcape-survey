@@ -1,59 +1,121 @@
 import React from "react";
-import { Mail } from 'lucide-react';
-import captainImage from '../assets/captain.jpg'; // adjust path based on setup
+import { ClipboardCheck, ClipboardList, Star } from "lucide-react";
 
 const About = () => {
   return (
     <>
-      <section id="about" className="bg-[#f4f6fb] py-16 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-blue-900 text-3xl font-extrabold mb-2 text-balance">
-              Captain Md Fazlay Uddin Chowdhury
+      <section
+        className="bg-gradient-to-br from-white to-blue-50 py-20 px-6"
+        id="about"
+      >
+        <div className="max-w-7xl mx-auto space-y-16">
+          {/* Intro */}
+          <div className="text-center">
+            <h2 className="text-4xl font-extrabold text-blue-900 uppercase mb-4 tracking-tight">
+              About Us
             </h2>
-            <p className="italic mb-6">
-              Managing Director of the Inchcape Survey & Inspection Company
-              Limited
+            <p className="text-base md:text-lg text-gray-700 max-w-4xl mx-auto border-l-4 border-red-600 pl-4 text-left">
+              INCHCAPE SURVEY & INSPECTION COMPANY LIMITED HAVE PROFESSIONAL
+              EXPERT TO CONDUCT ALL MARINE SURVEY ACTIVITY LIKELY ON HIRE
+              SURVEY, CONDITION SURVEY, OFF HIRE BUNKER SURVEY, TOWING & LASHING
+              SURVEY, STUFFING SURVEY, PRE-LOADING SURVEY, BUNKER SURVEY, MARINE
+              WARRANTY SURVEY, VESSELS SUITABILITY SURVEY, TOWING INSPECTION
+              SURVEY, PROJECT CARGO SURVEY AND P&I SURVEY.
             </p>
-            <blockquote className="text-lg text-gray-700 font-medium border-l-4 border-blue-700 pl-4 mb-4">
-              “TO CREATE SUCCESS & HAPPINESS FOR CUSTOMERS & EMPLOYEES BY
-              INCREASING EFFICIENCY & PROFITABILITY FOR THE COMPANY”
-            </blockquote>
-            <p className="text-sm mb-4 text-gray-700">
-              Md Fazlay Uddin Chowdhury has over 15 years of experience as
-              Master on 22 vessels and sea experience over 30 years. He gained
-              experience on oil tankers (crude & product including VLCCs), bulk
-              carriers (handy to cape size), OBO and general cargo/container
-              vessels.
+          </div>
+
+          {/* Who We Are */}
+          <div className="bg-white shadow rounded-xl p-6">
+            <div className="flex items-center gap-3 text-blue-900 font-bold text-xl mb-3">
+              <ClipboardCheck className="w-6 h-6" />
+              WHO WE ARE
+            </div>
+            <p className="italic text-red-600 text-base md:text-lg">
+              OUR MARINE SURVEYORS HAS THE TECHNICAL STRENGTH, KNOWLEDGE AND
+              TOOLS TO ACHIEVE THE PRECISION, ACCURACY AND RESULTS YOU NEED.
             </p>
-            <p className="text-sm mb-4 text-gray-700">
-              He has worked with Ship Management Companies managing oil tankers,
-              chemical tankers, gas tankers, containers, Ro-Ro and Ro-Pax
-              vessels. As a consultant since 2010, he has handled
-              fire/explosion, collisions, grounding, unsafe port disputes,
-              building disputes, cargo damage, wreck removals etc.
-            </p>
-            <p className="text-sm text-gray-700">
-              He has also carried out numerous 'Navigational Audits',
-              'Pre-purchase Inspections', 'PNI Survey', 'Condition Surveys' and
-              'Bay Piloting'.
-            </p>
-            <div className="flex items-center gap-2 text-blue-800 mt-4">
-              <Mail className="w-5 h-5" />
-              <a
-                href="mailto:captainfazlayuddin@gmail.com"
-                className="hover:underline"
-              >
-                captainfazlayuddin@gmail.com
-              </a>
+          </div>
+
+          {/* What We Do */}
+          <div className="bg-white shadow rounded-xl p-6">
+            <div className="flex items-center gap-3 text-blue-900 font-bold text-xl mb-6">
+              <ClipboardList className="w-6 h-6" />
+              WHAT WE DO
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-base text-gray-800">
+              <ul className="space-y-4">
+                <li className="pl-4 border-l-4 border-blue-300">
+                  Marine Inspection
+                </li>
+                <li className="pl-4 border-l-4 border-blue-300">
+                  Liquid Cargo and Gas Survey
+                </li>
+                <li className="pl-4 border-l-4 border-blue-300">
+                  Laboratory analysis
+                </li>
+                <li className="pl-4 border-l-4 border-blue-300">
+                  Cargo Inspection
+                </li>
+                <li className="pl-4 border-l-4 border-blue-300">
+                  Ship Inspectors
+                </li>
+                <li className="pl-4 border-l-4 border-blue-300">
+                  Maritime consultant and surveyor
+                </li>
+              </ul>
+              <ul className="space-y-4">
+                <li className="pl-4 border-l-4 border-blue-300">
+                  Claim Investigators
+                </li>
+                <li className="pl-4 border-l-4 border-blue-300">
+                  Vessel Collisions Surveyors and Investigators
+                </li>
+                <li className="pl-4 border-l-4 border-blue-300">
+                  Mechanical Inspectors
+                </li>
+                <li className="pl-4 border-l-4 border-blue-300">
+                  Loss Adjusters
+                </li>
+                <li className="pl-4 border-l-4 border-blue-300">
+                  Investigators and consulter
+                </li>
+                <li className="pl-4 border-l-4 border-blue-300">
+                  Electrical Inspectors
+                </li>
+              </ul>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center">
-            <img
-              src={captainImage}
-              alt="Capt. Md Fazlay Uddin Chowdhury"
-              className="rounded-lg shadow-md w-full max-w-sm"
-            />
+
+          {/* Our Values */}
+          <div className="bg-white shadow rounded-xl p-6">
+            <div className="flex items-center gap-3 text-blue-900 font-bold text-xl mb-6">
+              <Star className="w-6 h-6" />
+              OUR VALUES
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-base">
+              <ul className="space-y-4">
+                <li className="pl-4 border-l-4 border-blue-300">
+                  • Quality Precision Inspection
+                </li>
+                <li className="pl-4 border-l-4 border-blue-300">
+                  • Creative and Professional Experts
+                </li>
+                <li className="pl-4 border-l-4 border-blue-300">
+                  • Accurate Reporting
+                </li>
+              </ul>
+              <ul className="space-y-4">
+                <li className="pl-4 border-l-4 border-blue-300">
+                  • Fast Response
+                </li>
+                <li className="pl-4 border-l-4 border-blue-300">
+                  • Ensure Customer Satisfaction
+                </li>
+                <li className="pl-4 border-l-4 border-blue-800 font-bold text-blue-800">
+                  Survey & Inspection success rate is 100%
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
