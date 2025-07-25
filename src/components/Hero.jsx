@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Hero = () => {
   const [showVideo, setShowVideo] = useState(false);
@@ -44,20 +45,33 @@ const Hero = () => {
 
       {/* Content */}
       <section className="relative z-20 flex items-center justify-center h-full px-6 text-center">
-        <div className="max-w-3xl">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-4 drop-shadow-md">
-            Ensuring Maritime <br /> Safety & Excellence
+        <div className="flex flex-col gap-10 max-w-7xl">
+          <h1 className="text-3xl sm:text-4xl md:text-7xl font-extrabold leading-tight mb-4 drop-shadow-md text-balance">
+            Reliable Maritime Inspection
+            <span className="text-blue-900"> Trusted Worldwide</span>
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 drop-shadow-sm">
-            Trusted marine surveyors with decades of experience. Supporting
-            shipping operations across all major Bangladeshi ports.
+            Trusted marine surveyors with decades of experience.
+            <br />
+            Supporting shipping operations across all major Bangladeshi ports.
           </p>
-          <a
+          {/* <a
             href="#contact"
             className="inline-block bg-white text-blue-900 font-semibold px-6 py-3 rounded shadow hover:bg-blue-100 transition"
           >
             Contact Us
-          </a>
+          </a> */}
+          <div>
+            <a
+              href="https://wa.me/8801789902282"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-2xl inline-flex items-center gap-2 font-semibold px-6 py-3 rounded shadow bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-blue-900 transition-colors duration-300 w-full sm:w-auto self-center"
+            >
+              <FaWhatsapp className="text-blue-900 group-hover:text-blue-900 transition-colors duration-300" />
+              Contact Us
+            </a>
+          </div>
         </div>
       </section>
     </div>

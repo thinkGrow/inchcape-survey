@@ -5,7 +5,9 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      const currentScroll = window.scrollY;
+      console.log("ScrollY:", currentScroll);
+      setScrolled(currentScroll > 50); 
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -16,9 +18,7 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 w-full z-50 px-6 py-4 text-white shadow-sm 
         transition-colors duration-500 ease-in-out 
-        ${
-          scrolled ? "bg-blue-900 shadow-md" : "bg-blue-300/60 backdrop-blur-md"
-        }`}
+        ${scrolled ? "bg-blue-900 shadow-md" : "transparent"}`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center transition-all duration-500">
         <h1 className="text-xl font-bold">
