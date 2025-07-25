@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 px-6 py-4 text-white transition-colors duration-500 ease-in-out 
-      ${scrolled ? "bg-blue-900 shadow-md" : "bg-transparent backdrop-blur-md"}`}
+      ${scrolled ? "bg-blue-900 shadow-md" : "bg-transparent"}`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Left: Logo */}
