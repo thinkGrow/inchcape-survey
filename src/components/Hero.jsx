@@ -32,7 +32,11 @@ const Hero = () => {
           showVideo ? "opacity-100" : "opacity-0"
         }`}
       >
-        <source src="/hero.mp4" type="video/mp4" />
+        {/* <source src="/hero.mp4" type="video/mp4" /> */}
+        <source
+          src="https://res.cloudinary.com/dhlu0f35d/video/upload/v1753470025/hero_novkxa.mp4"
+          type="video/mp4"
+        />
       </video>
 
       {/* Overlay */}
