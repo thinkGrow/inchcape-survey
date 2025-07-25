@@ -61,14 +61,14 @@ const Hero = () => {
           >
             Contact Us
           </a> */}
-          <div>
+          <div className="flex justify-center">
             <a
               href="https://wa.me/8801789902282"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-2xl inline-flex items-center gap-2 font-semibold px-6 py-3 rounded shadow bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-blue-900 transition-colors duration-300 w-full sm:w-auto self-center"
+              className="group flex items-center justify-center gap-2 text-base sm:text-lg font-semibold px-4 sm:px-6 py-3 rounded-md shadow bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-blue-900 transition-colors duration-300 w-full sm:w-auto"
             >
-              <FaWhatsapp className="text-green-600 group-hover:text-blue-900 transition-colors duration-300" />
+              <FaWhatsapp className="text-green-500 group-hover:text-blue-900 transition-colors duration-300 text-xl sm:text-2xl" />
               Contact Us
             </a>
           </div>

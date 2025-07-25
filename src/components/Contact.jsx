@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="bg-gradient-to-br from-white to-blue-50 py-20 px-6"
+      className="bg-gradient-to-br from-white to-blue-300 py-20 px-6"
     >
       <div className="max-w-5xl mx-auto space-y-12">
         {/* Heading */}

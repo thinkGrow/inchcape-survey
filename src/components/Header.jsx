@@ -25,7 +25,7 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Left: Logo */}
-        <h1 className="text-xl font-bold">
+        <h1 className="text-xl font-bold text-balance">
           Inchcape Survey & Inspection Co. Ltd.
         </h1>
 
