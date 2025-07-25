@@ -47,7 +47,9 @@ const About = () => {
             WHO WE ARE
           </div>
           <div className="bg-blue-50 rounded-md p-4 text-center text-blue-900 text-base font-medium">
-            Our marine surveyors combine technical strength, operational knowledge, and modern tools to deliver consistent and reliable inspections across all vessel types.
+            Our marine surveyors combine technical strength, operational knowledge,
+            <br />
+             and modern tools to deliver consistent and reliable inspections across all vessel types.
           </div>
         </div>
 

@@ -11,10 +11,10 @@ import Standards from "../components/Standards";
 export default function InchcapeLanding() {
   return (
     <div className="font-sans text-gray-800">
-      <Header></Header>
+      {/* <Header></Header> */}
 
       {/* Hero Section */}
-      <Hero></Hero>
+      {/* <Hero></Hero> */}
 
       {/* Managing Director Section */}
       <ManagingDirector></ManagingDirector>
@@ -26,13 +26,13 @@ export default function InchcapeLanding() {
       <Services></Services>
 
       {/* Contact */}
-      <Contact></Contact>
+      {/* <Contact></Contact> */}
 
       {/* Standards */}
       {/* <Standards></Standards> */}
 
       {/* Footer */}
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </div>
   );
 }
