@@ -7,6 +7,7 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import ManagingDirector from "../components/ManagingDirector";
 import Standards from "../components/Standards";
+import Stats from "../components/Stats";
 
 export default function InchcapeLanding() {
   return (
@@ -15,6 +16,8 @@ export default function InchcapeLanding() {
 
       {/* Hero Section */}
       {/* <Hero></Hero> */}
+
+      <Stats></Stats>
 
       {/* Managing Director Section */}
       <ManagingDirector></ManagingDirector>
