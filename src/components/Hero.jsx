@@ -68,7 +68,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               className="text-2xl inline-flex items-center gap-2 font-semibold px-6 py-3 rounded shadow bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-blue-900 transition-colors duration-300 w-full sm:w-auto self-center"
             >
-              <FaWhatsapp className="text-blue-900 group-hover:text-blue-900 transition-colors duration-300" />
+              <FaWhatsapp className="text-green-600 group-hover:text-blue-900 transition-colors duration-300" />
               Contact Us
             </a>
           </div>
