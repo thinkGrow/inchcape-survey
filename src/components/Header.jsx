@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -42,9 +42,12 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
-        <h1 className="text-xl font-bold text-balance">
+        {/* <a href="#" className="text-xl font-bold text-balance">
           Inchcape Survey & Inspection Co. Ltd.
-        </h1>
+        </a> */}
+        <Link to="/" className="text-xl font-bold text-balance">
+          Inchcape Survey & Inspection Co. Ltd.
+        </Link>
 
         {/* Nav links - desktop */}
         <nav className="hidden md:flex items-center gap-8">
