@@ -103,7 +103,7 @@ const Hero = () => {
             {isDetails ? (
               <>
                 {/* Explore Our{" "} */}
-                <div className="text-blue-900 pt-100 lg:pt-18">
+                <div className="text-blue-900 pt-100 md:pt-10 text-xl">
                   Service Details
                 </div>
               </>
@@ -126,7 +126,7 @@ const Hero = () => {
           {isDetails && (
             // <div className="max-h-screen overflow-y-auto scrollbar-thin">
             <div className="max-h-screen overflow-y-auto scrollbar-hide">
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 z-20">
+              <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-6 z-20">
                 {services.map((service, idx) => (
                   <motion.div
                     key={idx}
@@ -144,7 +144,7 @@ const Hero = () => {
                     <h3 className="text-xl font-semibold mb-3">
                       {service.title}
                     </h3>
-                    <ul className="space-y-1 text-md p-1">
+                    <ul className="space-y-1 text-[10px] lg:text-md p-1">
                       {service.items.map((item, i) => (
                         <li className="bg-gray-100/10 rounded-full p-1" key={i}>
                           {item}
