@@ -15,10 +15,10 @@ const ManagingDirector = () => {
               Managing Director of the Inchcape Survey & Inspection Company
               Limited
             </p>
-            <blockquote className="text-lg text-gray-700 font-medium border-l-4 border-blue-700 pl-4 mb-4">
+            {/* <blockquote className="text-lg text-gray-700 font-medium border-l-4 border-blue-700 pl-4 mb-4">
               “TO CREATE SUCCESS & HAPPINESS FOR CUSTOMERS & EMPLOYEES BY
               INCREASING EFFICIENCY & PROFITABILITY FOR THE COMPANY”
-            </blockquote>
+            </blockquote> */}
             <p className="text-sm mb-4 text-gray-700">
               Md Fazlay Uddin Chowdhury has over 15 years of experience as
               Master on 22 vessels and sea experience over 30 years. He gained

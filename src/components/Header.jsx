@@ -1,39 +1,91 @@
 import React, { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const navLinks = [
+    { label: "Home", href: "#" },
+    { label: "About", href: "#about" },
+    { label: "Services", href: "#services" },
+    { label: "Contact", href: "#contact" },
+  ];
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScroll = window.scrollY;
-      console.log("ScrollY:", currentScroll);
-      setScrolled(currentScroll > 50); 
-    };
-
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 px-6 py-4 text-white shadow-sm 
-        transition-colors duration-500 ease-in-out 
-        ${scrolled ? "bg-blue-900 shadow-md" : "transparent"}`}
+      className={`fixed top-0 left-0 w-full z-50 px-6 py-4 text-white transition-colors duration-500 ease-in-out 
+      ${scrolled ? "bg-blue-900 shadow-md" : "bg-transparent backdrop-blur-md"}`}
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center transition-all duration-500">
+      <div className="max-w-7xl mx-auto flex items-center justify-between">
+        {/* Left: Logo */}
         <h1 className="text-xl font-bold">
           Inchcape Survey & Inspection Co. Ltd.
         </h1>
-        <div>
+
+        {/* Center: Nav links (desktop only) */}
+        <nav className="hidden md:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="hover:underline hover:text-blue-200 text-sm transition"
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+
+        {/* Right: Email + Phone (desktop only) */}
+        <div className="hidden md:flex flex-col text-right text-sm">
           <a
             href="mailto:captainfazlayuddin@gmail.com"
-            className="text-sm hover:underline"
+            className="hover:underline"
           >
             captainfazlayuddin@gmail.com
           </a>
           <p>+880-1766130834</p>
         </div>
+
+        {/* Hamburger (mobile only) */}
+        <button
+          className="md:hidden ml-4"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
       </div>
+
+      {/* Mobile Dropdown Menu */}
+      {menuOpen && (
+        <div className="md:hidden mt-4 px-4 space-y-3">
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={() => setMenuOpen(false)}
+              className="block text-sm hover:underline"
+            >
+              {link.label}
+            </a>
+          ))}
+          <div className="text-sm mt-4 border-t pt-2">
+            <a
+              href="mailto:captainfazlayuddin@gmail.com"
+              className="block hover:underline"
+            >
+              captainfazlayuddin@gmail.com
+            </a>
+            <p>+880-1766130834</p>
+          </div>
+        </div>
+      )}
     </header>
   );
 };

@@ -14,7 +14,7 @@ const About = () => {
             <h2 className="text-4xl font-extrabold text-blue-900 uppercase mb-4 tracking-tight">
               About Us
             </h2>
-            <p className="text-base md:text-lg text-gray-700 max-w-4xl mx-auto border-l-4 border-red-600 pl-4 text-left">
+            <p className="text-base md:text-lg text-gray-700 max-w-4xl mx-auto border-l-4 border-blue-900 pl-4 text-left">
               INCHCAPE SURVEY & INSPECTION COMPANY LIMITED HAVE PROFESSIONAL
               EXPERT TO CONDUCT ALL MARINE SURVEY ACTIVITY LIKELY ON HIRE
               SURVEY, CONDITION SURVEY, OFF HIRE BUNKER SURVEY, TOWING & LASHING
@@ -30,7 +30,7 @@ const About = () => {
               <ClipboardCheck className="w-6 h-6" />
               WHO WE ARE
             </div>
-            <p className="italic text-red-600 text-base md:text-lg">
+            <p className="italic text-blue-900 text-base font-bold md:text-lg text-center text-balance">
               OUR MARINE SURVEYORS HAS THE TECHNICAL STRENGTH, KNOWLEDGE AND
               TOOLS TO ACHIEVE THE PRECISION, ACCURACY AND RESULTS YOU NEED.
             </p>
