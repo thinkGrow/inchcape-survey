@@ -103,7 +103,9 @@ const Hero = () => {
             {isDetails ? (
               <>
                 {/* Explore Our{" "} */}
-                <span className="text-blue-900">Service Details</span>
+                <div className="text-blue-900 pt-100 lg:pt-18">
+                  Service Details
+                </div>
               </>
             ) : (
               <>
@@ -112,7 +114,6 @@ const Hero = () => {
               </>
             )}
           </h1>
-
           {/* Description text (home only) */}
           {isHome && (
             <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 drop-shadow-sm">
@@ -121,39 +122,43 @@ const Hero = () => {
               Supporting shipping operations across all major Bangladeshi ports.
             </p>
           )}
-
           {/* Service Cards (only on details page) */}
           {isDetails && (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 z-20">
-              {services.map((service, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: -100 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{
-                    duration: 0.8,
-                    delay: idx * 0.3,
-                    type: "spring",
-                    stiffness: 100,
-                    damping: 10,
-                  }}
-                  className="bg-white/10 text-white p-6 shadow-xl border border-white/20 rounded-tl-3xl rounded-br-3xl hover:shadow-2xl backdrop-blur-[2px]"
-                >
-                  <h3 className="text-xl font-semibold mb-3">
-                    {service.title}
-                  </h3>
-                  <ul className="space-y-1 text-sm">
-                    {service.items.map((item, i) => (
-                      <li key={i}>{item}</li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
+            // <div className="max-h-screen overflow-y-auto scrollbar-thin">
+            <div className="max-h-screen overflow-y-auto scrollbar-hide">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 z-20">
+                {services.map((service, idx) => (
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, y: -100 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      duration: 0.8,
+                      delay: idx * 0.3,
+                      type: "spring",
+                      stiffness: 100,
+                      damping: 10,
+                    }}
+                    className="bg-white/10 text-white p-6 shadow-xl border border-white/20 rounded-tl-3xl rounded-br-3xl hover:shadow-2xl backdrop-blur-[2px]"
+                  >
+                    <h3 className="text-xl font-semibold mb-3">
+                      {service.title}
+                    </h3>
+                    <ul className="space-y-1 text-md p-1">
+                      {service.items.map((item, i) => (
+                        <li className="bg-gray-100/10 rounded-full p-1" key={i}>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           )}
 
           {/* WhatsApp CTA */}
-          <div className="flex justify-center">
+          {/* <div className="flex justify-center">
             <a
               href="https://wa.me/8801789902282"
               target="_blank"
@@ -161,6 +166,17 @@ const Hero = () => {
               className="group flex items-center justify-center gap-2 text-base sm:text-lg font-semibold px-4 sm:px-6 py-3 rounded-md shadow bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-blue-900 transition-colors duration-300 w-full sm:w-auto"
             >
               <FaWhatsapp className="text-green-500 group-hover:text-blue-900 transition-colors duration-300 text-xl sm:text-2xl" />
+              Contact Us
+            </a>
+          </div> */}
+          <div className="fixed bottom-6 right-6 z-50">
+            <a
+              href="https://wa.me/8801789902282"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-2 bg-green-500 text-white font-semibold px-4 py-3 rounded-full shadow-lg hover:bg-green-600 transition duration-300"
+            >
+              <FaWhatsapp className="text-white text-xl group-hover:scale-110 transition-transform duration-300" />
               Contact Us
             </a>
           </div>

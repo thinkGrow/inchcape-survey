@@ -11,8 +11,8 @@ const Layout = () => {
     <>
       <Header />
       <Hero></Hero>
-      <main className="min-h-screen">
-        <Outlet /> {/* This renders the page-specific content */}
+      <main>
+        <Outlet />
       </main>
       <Contact />
       <Footer />

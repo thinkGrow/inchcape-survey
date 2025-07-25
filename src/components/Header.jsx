@@ -55,7 +55,7 @@ const Header = () => {
             <button
               key={link.href}
               onClick={() => handleNavClick(link.href)}
-              className="hover:underline hover:text-blue-200 text-sm transition"
+              className="hover:underline hover:text-blue-200 text-sm transition cursor-pointer"
             >
               {link.label}
             </button>
