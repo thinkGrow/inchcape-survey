@@ -177,7 +177,7 @@ const Hero = () => {
               className="group flex items-center gap-2 bg-green-500 text-white font-semibold px-4 py-3 rounded-full shadow-lg hover:bg-green-600 transition duration-300"
             >
               <FaWhatsapp className="text-white text-xl group-hover:scale-110 transition-transform duration-300" />
-              Contact Us
+              WhatsApp Us
             </a>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Phone } from "lucide-react";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -70,7 +71,10 @@ const Header = () => {
           >
             captainfazlayuddin@gmail.com
           </a>
-          <p>+880-1766130834</p>
+          <div className="flex items-center gap-3 justify-end">
+            <Phone></Phone>
+            <p>+880-1766130834</p>
+          </div>
         </div>
 
         {/* Hamburger - mobile */}

@@ -1,6 +1,7 @@
 import React from "react";
-import { Mail } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import captainImage from "../assets/captain.jpg";
+import { FaWhatsapp } from "react-icons/fa";
 
 const ManagingDirector = () => {
   return (
@@ -15,10 +16,7 @@ const ManagingDirector = () => {
               Managing Director of the Inchcape Survey & Inspection Company
               Limited
             </p>
-            {/* <blockquote className="text-lg text-gray-700 font-medium border-l-4 border-blue-700 pl-4 mb-4">
-              “TO CREATE SUCCESS & HAPPINESS FOR CUSTOMERS & EMPLOYEES BY
-              INCREASING EFFICIENCY & PROFITABILITY FOR THE COMPANY”
-            </blockquote> */}
+
             <p className="text-sm mb-4 text-gray-700">
               Md Fazlay Uddin Chowdhury has over 15 years of experience as
               Master on 22 vessels and sea experience over 30 years. He gained
@@ -38,16 +36,38 @@ const ManagingDirector = () => {
               'Pre-purchase Inspections', 'PNI Survey', 'Condition Surveys' and
               'Bay Piloting'.
             </p>
-            <div className="flex items-center gap-2 text-blue-800 mt-4">
-              <Mail className="w-5 h-5" />
-              <a
-                href="mailto:captainfazlayuddin@gmail.com"
-                className="hover:underline"
-              >
-                captainfazlayuddin@gmail.com
-              </a>
+
+            {/* Contact Info */}
+            <div className="space-y-2 mt-6 text-blue-800 text-sm">
+              <div className="flex items-center gap-2">
+                <Mail className="w-5 h-5" />
+                <a
+                  href="mailto:captainfazlayuddin@gmail.com"
+                  className="hover:underline"
+                >
+                  captainfazlayuddin@gmail.com
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="w-5 h-5" />
+                <a href="tel:+8801766130834" className="hover:underline">
+                  +880-1766130834
+                </a>
+              </div>
+              <div className="flex items-center gap-2 text-green-600">
+                <FaWhatsapp className="w-5 h-5 text-green-600" />
+                <a
+                  href="https://wa.me/8801789902282"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  +880-1789902282
+                </a>
+              </div>
             </div>
           </div>
+
           <div className="flex flex-col items-center justify-center">
             <img
               src={captainImage}
