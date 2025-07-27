@@ -54,13 +54,11 @@ const ServiceDetails = () => {
     },
   ];
   return (
-    <div className="bg-[url('/hero.jpg')] opacity-90 bg-cover bg-center h-screen md:pt-40">
+    <div className="bg-[url('/hero.jpg')] opacity-90 bg-cover bg-center h-auto md:h-screen py-30 md:pt-24">
       <div className="max-w-6xl mx-auto items-center">
         <div className="max-h-screen overflow-y-auto scrollbar-hide">
-          <h1 className="text-3xl sm:text-4xl lg:text-7xl font-extrabold leading-tight drop-shadow-md text-center text-balance">
-            <div className="text-blue-900 pt-30 md:pt-10 mb-10">
-              Service Details
-            </div>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight drop-shadow-md text-center text-balance">
+            <div className="text-blue-900 mb-4">Service Details</div>
           </h1>
           <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-6 z-20">
             {services.map((service, idx) => (
@@ -77,8 +75,10 @@ const ServiceDetails = () => {
                 }}
                 className="bg-white/10 text-black p-6 shadow-xl border border-white/20 rounded-tl-3xl rounded-br-3xl hover:shadow-2xl backdrop-blur-[2px]"
               >
-                <h3 className="text-xl lg:text-2xl font-semibold mb-3">{service.title}</h3>
-                <ul className="space-y-1 text-[10px] lg:text-sm lg:text-md p-1">
+                <h3 className="text-xl lg:text-xl font-semibold mb-3">
+                  {service.title}
+                </h3>
+                <ul className="space-y-1 text-[10px] lg:text-[10px] lg:text-md p-1 font-semibold">
                   {service.items.map((item, i) => (
                     <li className="bg-gray-100/10 rounded-full p-1" key={i}>
                       {item}
