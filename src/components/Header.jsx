@@ -96,7 +96,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden mt-4 px-4 space-y-3">
+        <div className="md:hidden mt-4 px-4 space-y-3 bg-white py-4 rounded-2xl text-black">
           {navLinks.map((link) => (
             <button
               key={link.href}
