@@ -17,10 +17,18 @@ const Header = () => {
   ];
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleScroll = () => {
+      if (location.pathname === "/") {
+        setScrolled(window.scrollY > 50);
+      } else {
+        setScrolled(true); // Always blue on other pages
+      }
+    };
+
+    handleScroll(); // trigger once on mount
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [location.pathname]);
 
   const handleNavClick = (href) => {
     if (location.pathname !== "/") {
@@ -38,8 +46,8 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 px-6 py-4 text-white transition-colors duration-500 ease-in-out 
-        ${scrolled ? "bg-blue-900 shadow-md" : "bg-base-900"}`}
+      className={`fixed top-0 left-0 w-full z-50 px-6 py-4 text-black transition-colors duration-500 ease-in-out font-semibold
+        ${scrolled ? "bg-blue-900 shadow-md text-white" : "text-blue-900 bg-base-900"}`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}

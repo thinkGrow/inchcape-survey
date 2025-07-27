@@ -15,7 +15,7 @@ export default function InchcapeLanding() {
       {/* <Header></Header> */}
 
       {/* Hero Section */}
-      {/* <Hero></Hero> */}
+      <Hero></Hero>
 
       <Stats></Stats>
 

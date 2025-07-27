@@ -10,7 +10,6 @@ const Layout = () => {
   return (
     <>
       <Header />
-      <Hero></Hero>
       <main>
         <Outlet />
       </main>
